@@ -129,16 +129,29 @@ ul.posts span {
 
 .site .footer .bio {
   margin-left: 100px;
+  margin-top: 7px;
 }
 
 .site .footer .bio .name {
   font-family: Lato, Verdana, Tahoma, sans-serif;
   font-weight: 800;
   font-size: 18px;
+  float: left;
 }
 
-.site .footer .bio a {
+.site .footer .bio .name a {
   color: #ff6760;
+}
+
+.site .footer .bio .description {
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  padding-top: 30px;
+}
+
+.site .footer .social {
+  font-size: 20px;
+  float: right;
 }
 
 .site .footer .rss {
