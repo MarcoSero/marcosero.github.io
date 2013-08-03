@@ -2,3 +2,4 @@ name: Marco Sero
 markdown: redcarpet
 pygments: true
 paginate: 5
+permalink: /:title
