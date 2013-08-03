@@ -25,13 +25,16 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-family: Lato, Verdana, Tahoma, sans-serif;
   font-size: 48px;
+  line-height: 54px;
+  font-weight: 800;
+  color: #444;
 }
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #000; text-decoration: none; }
-a:visited { color: #000; }
+a         { color: #444; text-decoration: none; }
+a:visited { color: #444; }
 a:hover   { color: #ff6760; }
 
 /*****************************************************************************/
@@ -63,11 +66,9 @@ ul.posts span {
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
   line-height: 1.5em;
 }
-
+/*
 .site .header {
   text-align: center;
 }
@@ -86,15 +87,41 @@ ul.posts span {
 
 .site .header h1.title a {
   color: #ff6760;
+}*/
+
+.content {
+  width: 42em;
+  margin: 3em auto 2em;
 }
 
-.site .header a.extra {
-  color: #aaa;
-  margin-left: 1em;
+.site .header {
+  background: url(/images/blur-v2.png) center top no-repeat, url(/images/bg-noise-grey-v2.jpg);
+  border-bottom: 1px solid #e3e3e4;
+  border-top: 6px solid #00b193;
+  background-color: #f5f6f6;
+  text-align: center;
+  padding: 20px;
+}
+
+.site .header .title {
+  color: #000;
+  font-size: 30px;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+}
+
+.site .header .subtitle {
+  color: #000;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+
 }
 
 .date {
-  font-size: 15px;
+  font-size: 17px;
   font-family: 'Merriweather', serif;
   color: #aaa;
   font-style: italic;
@@ -134,6 +161,21 @@ ul.posts span {
 /*****************************************************************************/
 
 /* standard */
+.post {
+  margin-bottom: 50px;
+  color: #444;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.post blockquote {
+  border-left: 5px solid #ff6760;
+  padding-left: 20px;
+  font-style: italic;
+}
+
 .post pre {
   border: 1px solid #ddd;
   background-color: #EDEDED;
@@ -154,6 +196,10 @@ ul.posts span {
   border: none;
 }
 
+.post a {
+  color: #ff6760;
+}
+
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;
@@ -163,4 +209,20 @@ ul.posts span {
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+
+/****
+Pagination
+***/
+
+#pagination {
+  font-family: Lato, Verdana, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  height: 30px;
+}
+
+#pagination .next {
+  float: right;
 }

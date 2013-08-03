@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "Userl"
+date:   2012-10-02 21:35:46
+categories: Ruby Github2
+---
+
+Exploring GitHub, often I ask myself: "What's this user's favourite language? How does it like to get stuff done?"  
+Because of that, I create **userl**, a tiny Ruby script to scan the repositories of a GitHub user detecting its preferred languages.
+
+You can quickly install it via RubyGems
+
+  $ gem install userl
+
+To start to analyze user's repositories, type 
+
+
+  $ userl marcosero
+
+and you'll get this
+
+  +----------------------------+----------+----------+-----------------+
+  |                      marcosero repositories                      |
+  +----------------------------+----------+----------+-----------------+
+  | Name                       | Stars    | Forks    | language        |
+  +----------------------------+----------+----------+-----------------+
+  | Event-Detection            | 2        | 1        | Java            |
+  | Event-Detection-iOS-App    | 1        | 0        | Objective-C     |
+  | lifeofadev.eu              | 1        | 0        | JavaScript      |
+  | Mail-my-IP                 | 2        | 0        | Java            |
+  | msChat                     | 1        | 0        | Java            |
+  | MSMapClustering            | 2        | 0        | Objective-C     |
+  | newsyc                     | 1        | 0        | Objective-C     |
+  | SnoozeOrStop               | 1        | 0        | Objective-C     |
+  | SpringBoard-iOS-5.0        | 4        | 3        | Objective-C     |
+  | The-Setup                  | 1        | 0        | Shell           |
+  | toSync                     | 1        | 0        | Java            |
+  +----------------------------+----------+----------+-----------------+
+  |                            | 17       | 4        |
+  +----------------------------+----------+----------+-----------------+
+  +-----------------------------------+--------------------------------+
+  |                       marcosero languages                        |
+  +-----------------------------------+--------------------------------+
+  | Language                          | Bytes                          |
+  +-----------------------------------+--------------------------------+
+  | Objective-C                       | 1597039                        |
+  | JavaScript                        | 96339                          |
+  | Ruby                              | 70642                          |
+  | Java                              | 66165                          |
+  | PHP                               | 5261                           |
+  | C                                 | 2844                           |
+  | Shell                             | 2046                           |
+  | CoffeeScript                      | 1244                           |
+  | C++                               | 706                            |
+  +-----------------------------------+--------------------------------+
+
+
+### Source code
+Userl is released under the [MIT](http://www.tldrlegal.com/l/MIT) license: do whatever you want, but remember to mention me.
+
+You can find it on my GitHub: [https://github.com/MarcoSero/userl][1]
+
+  [1]: https://github.com/MarcoSero/userl

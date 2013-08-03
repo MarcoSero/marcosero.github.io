@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "The Setup"
+date:   2012-09-30 21:35:46
+categories: Ruby Rails Github
+---
+
+I needed a script to quickly setup a development environment on my MacBook Pro.
+
+I read about a GitHub tool called "[The Setup][1]", but unfortunately it is not yet open source. Because of that, after some research, I found a Thoughtbout project, [laptop][2], which has the same purpose, so I decided to fork it and create my own [Setup][3].
+
+It automates a lot of boring tasks installing:
+
+- GitHub SSH-keys
+- Ruby through RVM
+- rails gem
+- heroku gem
+- mysql2 gem
+- pg gem
+- mongodb gem
+- foreman gem
+- capistrano gem
+- Homebrew
+- MySQL
+- Postgres
+- MongoDB
+- ack
+- tmux
+- ImageMagick
+- QT
+- Heroku plugins
+
+In the future I would add the setup of Sublime Text 2 and .dotfiles.
+
+You can find it on my GitHub: [The Setup][3]
+
+  [1]: https://speakerdeck.com/u/wfarr/p/the-setup-managing-an-army-of-laptops-with-puppet
+
+  [2]: https://github.com/thoughtbot/laptop
+
+  [3]: https://github.com/MarcoSero/The-Setup

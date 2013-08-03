@@ -1,3 +1,4 @@
-name: Marco's Thoughts
+name: Marco Sero
 markdown: redcarpet
 pygments: true
+paginate: 5

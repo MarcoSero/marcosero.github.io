@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "WWDC 2013"
+date:   2013-06-10 21:35:46
+categories: iOS
+---
+
+As iOS developer, here's my humble list of what I hope to see today:
+
+Fix **UICollectionView's**, or everyone will be using [PSTCollectionView](https://github.com/steipete/PSTCollectionView) (which is great by the way).
+
+Fix **iCloud**. Because *it just doesn't work*. A back-end as a service like Parse which worked natively with Core Data would be great.
+
+Open **Siri** to third party developers to make it useful.
+
+Last but not least, give me a damn **Macbook Air Retina**! It will not happen, I already know.
