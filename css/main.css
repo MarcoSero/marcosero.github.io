@@ -92,6 +92,8 @@ ul.posts span {
 .content {
   max-width: 42em;
   margin: 3em auto 2em;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .site .header {
@@ -211,17 +213,4 @@ ul.posts span {
 
 #pagination .next {
   float: right;
-}
-
-/*****************************************************************************/
-/*
-/* Mobile
-/*
-/*****************************************************************************/
-
-@media (max-width: 699px) {
-  .content {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
