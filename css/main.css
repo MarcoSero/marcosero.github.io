@@ -68,32 +68,16 @@ ul.posts span {
   text-align: justify;
   line-height: 1.5em;
 }
-/*
-.site .header {
-  text-align: center;
-}
-
-.site .header a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.site .header h1.title {
-  display: inline-block;
-  margin-bottom: 2em;
-  font-size: 30px;
-  font-family: 'Merriweather', serif;
-}
-
-.site .header h1.title a {
-  color: #ff6760;
-}*/
 
 .content {
-  max-width: 42em;
+  max-width: 630px;
   margin: 3em auto 2em;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+img {
+  max-width: 630px;
 }
 
 .site .header {

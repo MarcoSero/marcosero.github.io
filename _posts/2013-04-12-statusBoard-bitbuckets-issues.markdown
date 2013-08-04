@@ -29,20 +29,23 @@ You have to setup the config inside the file `issues.rb`
 
  and then create a timed launcher for it. Something like this
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-        <key>Label</key>
-        <string>com.marcosero.status_board_issues</string>
-        <key>ProgramArguments</key>
-        <array>
-            <string>ruby path/to/issues.rb</string>
-        </array>
-        <key>StartInterval</key>
-        <integer>300</integer>
-    </dict>
-    </plist>
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.marcosero.status_board_issues</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>ruby path/to/issues.rb</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>300</integer>
+</dict>
+</plist>
+{% endhighlight %}
+
 
 and then copy it and start it:
 
