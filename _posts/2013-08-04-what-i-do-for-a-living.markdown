@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What do I do for a living"
+title:  "What I do for a living"
 date:   2013-06-25 21:35:46
 categories: General
 ---
