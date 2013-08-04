@@ -1,5 +1,7 @@
 name: Marco Sero
+description: Reading. Coding. Writing.
 markdown: redcarpet
 pygments: true
 paginate: 5
 permalink: /:title
+url: http://blog.marcosero.com
