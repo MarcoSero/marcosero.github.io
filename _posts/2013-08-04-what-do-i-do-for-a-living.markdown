@@ -23,7 +23,7 @@ Based on these two very inputs, I generally elaborate all my answers. But, just 
 Now, the algorithm gets a little bit trickier and the output (aka the answer) might take a while to be calculated (in the meantime I look like a bloody idiot blabbing something like "ehhh...eemmmhh...ehhhh") but eventually I've got the answer. Well, the answers:
 
 - I ***program computers*** (if the person doesn't give a damn what I actually do for a living)
-- I ***make iPhone and iPad apps*** (if the person is not tech savvy)
+- I ***make iPhone and iPad apps*** (if the person is *not* tech savvy)
 - I am an ***iOS [Software] Developer*** (if the person is tech savvy)
 - I am an ***iOS [Software] Engineer*** (again, just if the person is tech savvy)
 
