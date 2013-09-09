@@ -2,7 +2,7 @@
 layout: post
 title:  "Learning game development"
 date:   2013-09-08 21:35:46
-categories: Unity3D, Game Development
+categories: [Unity3D, Game Development]
 ---
 
 Every now and then, I get keen on a new technology and I decide I want to master it (even though I rarely do it). It can be a new programming language, a new MVC framework, a new platform and so forth.
