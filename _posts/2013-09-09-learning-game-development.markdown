@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learning game development"
-date:   2013-09-08 21:35:46
+date:   2013-09-09 20:42:46
 categories: [Unity3D, Game Development]
 ---
 
