@@ -29,7 +29,7 @@ I will skip the in-depth comparison, you can find a ton of articles about it. I 
 ### Unity3D and 3D modelling
 
 I immediately dove into Unity's official documentation and tutorials, you get [tons of them](http://unity3d.com/learn).  
-Both documentation and tutorials are really good, but after finishing them. The number of different ways for learning we have nowadays still amazes me.
+Both documentation and tutorials are really good, but after finishing them you can find a lot of third party tutorial on YouTube (links a the bottom). The number of different ways for learning we have nowadays still amazes me.
 
 As scripting language I could choose between **Javascript** and **C#** (Boo wasn't really a choice since doesn't support iOS development). Both languages are very solid and their ease of use makes them the perfect language to start with (anyone said no *hipster-syntax*? :P).  
 By the way, I picked C# as it is statically typed.
