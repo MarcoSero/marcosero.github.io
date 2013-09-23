@@ -2,7 +2,7 @@
 layout: post
 title:  "StatusBoard + BitBucket"
 date:   2013-04-12 21:35:46
-categories: Ruby Bitbucket Github
+categories: [Ruby, Bitbucket, Github]
 ---
 
 When it comes to nerdy stuff, here I am.

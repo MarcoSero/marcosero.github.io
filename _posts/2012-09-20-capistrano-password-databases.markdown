@@ -2,7 +2,7 @@
 layout: post
 title:  "Databases' passwords"
 date:   2012-09-20 21:35:46
-categories: Rails Github Capistrano
+categories: [Rails, Github, Capistrano]
 ---
 
 I push the source code of this blog both on GitHub and to my EC2 instance, where it runs.

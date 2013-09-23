@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "Nimble"
+date:   2013-09-23 20:42:46
+categories: [iOS, Github]
+---
+
+What's Nimble? Nimble is the Core Data wrapper I have been working on for one of my never-completed personal project.  
+If I had to describe Nimble with a very short description I would probably say: Core Data (and iCloud) made *nimble* and fast.
+
+### Why
+
+The answer is quite easy. I needed a Core Data wrapper with these features:
+
+- Easy setup and finders (anyone said MagicalRecord?)
+- Simple architecture with a main and a background context. A lot has been written about how much faster are 2 context rather than parent+children. Read [here](http://floriankugler.com/blog/2013/4/29/concurrent-core-data-stack-performance-shootout) and [here](http://floriankugler.com/blog/2013/5/11/backstage-with-nested-managed-object-contexts) if you're interested
+- iOS 7 and iCloud ready (but still compatible)
+
+### Features
+
+It has all the features I (and probably you) need from a Core Data wrapper.
+
+Easy setup of the core data stack
+
+    [NimbleStore nb_setupStore:&error];
+    // OR
+    [NimbleStore nb_setup_iCloudStore:&error]
+
+Easy savers for main and background thread
+
+    [NimbleStore nb_saveInBackground:^(NBContextType contextType) {
+      Book *book = [Book nb_createInContextOfType:contextType];
+      book.name = @"Best book ever";
+    }];
+
+And a lot of other shortcuts like creators:
+
+    [YourModelObject nb_createInContextOfType:NBMainContext initializingPropertiesWithDictionary:@{
+        @"name" : @"Marco" ,
+        @"surname" : @"Sero"
+    }];
+
+and finders + fetchers:
+
+    [NimbleStore nb_saveInBackground:^(NBContextType contextType) {
+      Book *book = [Book nb_findFirstInContext:contextType];
+      book.name = @"updated name";
+    }];
+
+    NSFetchedResultsController *fetchedResultsController = [Book nb_fetchAllGroupedBy:@"author" withPredicate:nil sortedBy:@"name" ascending:YES delegate:self];
+
+### What's next
+
+Well, there's a lot of stuff still to be done and it needs to be used in a real app with real world problems to spot big issues (performances and sync conflicts).  
+A todo list and the source code can be found on [GitHub](https://github.com/MarcoSero/Nimble). Please feel free to have a look and post any issue you could find.

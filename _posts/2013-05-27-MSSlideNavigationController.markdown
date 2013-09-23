@@ -2,7 +2,7 @@
 layout: post
 title:  "MSSlideNavigationController"
 date:   2013-05-27 21:35:46
-categories: iOS Github
+categories: [iOS, Github]
 ---
 
 The new version (> 6.0) of the Facebook app is probably one of the best non-Apple's app in the store nowadays.  

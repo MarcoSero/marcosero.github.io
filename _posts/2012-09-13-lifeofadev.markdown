@@ -2,7 +2,7 @@
 layout: post
 title:  "Life of a Dev"
 date:   2012-09-13 21:35:46
-categories: Ruby Rails
+categories: [Ruby, Rails]
 ---
 
 Only ten days ago, I [was writing](http://lifeofadev.eu/posts/thoughts-of-a-rails-and-ruby-beginner) about how beautiful is Ruby and how powerful is Ruby on Rails to develop web applications.  

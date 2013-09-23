@@ -2,7 +2,7 @@
 layout: post
 title:  "Rails + Capistrano"
 date:   2012-09-16 21:35:46
-categories: Rails Capistrano
+categories: [Rails, Capistrano]
 ---
 
 To run this blog, I must admit that I encountered some problem to have everything working.  
