@@ -1,0 +1,14 @@
+---
+layout: default
+title: Marco Sero
+---
+
+<div class="blog">
+
+	<ul class="posts">
+	  {% for post in site.posts %}
+	 	<li><a href="{{ post.url }}" class="post_title_archive">{{ post.title }}</a> <span class="date_archive">{{ post.date | date_to_string }}</span>  </li>  
+	  {% endfor %}
+	</ul>
+
+</div>

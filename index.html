@@ -6,10 +6,32 @@ title: Marco Sero
 <div class="home">
 
 
-  <ul class="posts">
-    {% for post in site.posts %}
-   	<li><a href="{{ post.url }}" class="post_title_archive">{{ post.title }}</a> <span class="date_archive">{{ post.date | date_to_string }}</span>  </li>  
-    {% endfor %}
-  </ul>
+    <div class="bio_home">
+      <div class="avatar">
+        
+      </div>
+      <div class="main_bio">
+        <div class="main_bio_1">
+        <img src="/images/avatar.png" width="200px" align="left" class="avatar">
+          I am an iOS developer based in London.<br> <br>
+          My main focus has always been writing high quality code and having a lot of fun during the process.<br>
+          Using my love for the platform hand in hand with my technical skills, I always struggle to create a seamless and neat interaction between the software I develop and its users.<br><br>
+        </div>
+        <div class="main_bio_2">
+          In my spare time, I enjoy creating everything that can run on a silicon processor, from server-side components to video games. I am also very keen on photography, always looking for a beautiful sunrise or planning the next exciting trip. 
+      </div>
+      </div>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.twitter.com/marcosero" target="_blank" class="btn transparent" onClick="_gaq.push(['_trackEvent', 'Link', 'socials', 'Twitter']);"><span class="glyphicons icon-large twitter"><i></i></span></a>
+      <a href="https://www.github.com/marcosero" target="_blank" class="btn transparent" onClick="_gaq.push(['_trackEvent', 'Link', 'socials', 'Github']);"><span class="glyphicons github large"><i></i></span></a> 
+      <a href="http://500px.com/marcosero" target="_blank" class="btn transparent" onClick="_gaq.push(['_trackEvent', 'Link', 'socials', '500px']);"><span class="glyphicons camera"><i></i></span></a>
+      <a href="http://flickr.com/marcosero" target="_blank" class="btn transparent" onClick="_gaq.push(['_trackEvent', 'Link', 'socials', 'Flickr']);"><span class="glyphicons flickr"><i></i></span></a>
+      <a href="https://www.facebook.com/marco.sero" target="_blank" class="btn transparent" onClick="_gaq.push(['_trackEvent', 'Link', 'socials', 'Facebook']);"><span class="glyphicons facebook"><i></i></span></a>
+      <a href="https://plus.google.com/115407302284917519417/posts" target="_blank" class="btn transparent" onClick="_gaq.push(['_trackEvent', 'Link', 'socials', 'Google Plus']);"><span class="glyphicons google_plus"><i></i></span></a>
+      <a href="http://instagram.com/marcosero" target="_blank" class="btn transparent" onClick="_gaq.push(['_trackEvent', 'Link', 'socials', 'Instagram']);"><span class="glyphicons instagram"><i></i></span></a>
+    </div>
+    <div class="cv">CV available upon request.</div>
 
 </div>
