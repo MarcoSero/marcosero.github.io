@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "This blog"
+date:   2012-04-24 21:35:46
+categories: General
+---
+
+That's the question I made myself: why should I start a new blog? The answer is easily explained: I'm a developer but first of all I consider myself a student, so I'll want to write about everything I am interested in (and I hope you too), such as web technologies, design patterns, mobile platforms, best coding practices, user interface design, computer networks, security, artificial intelligence... and so on, exploring a lot of fields of programming and computer science.
+I code mainly for iOS, so you have to excuse me if most of articles are about it.
+
+So, let's start!
