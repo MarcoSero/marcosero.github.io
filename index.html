@@ -5,28 +5,11 @@ title: Marco Sero
 
 <div class="home">
 
+
   <ul class="posts">
-    {% for post in paginator.posts %}
-   	  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p class="date">{{ post.date | date_to_string }}</p>
-      <div class="post">
-      	{{ post.content }}
-      </div>
+    {% for post in site.posts %}
+   	<li><a href="{{ post.url }}" class="post_title_archive">{{ post.title }}</a> <span class="date_archive">{{ post.date | date_to_string }}</span>  </li>  
     {% endfor %}
   </ul>
-
-  <nav id="pagination">
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-      <a href="/" title="Previous Page">Previous</a>
-      {% else %}
-      <a href="/page{{ paginator.previous_page }}/" title="Previous Page">Previous</a>
-      {% endif %}
-    {% endif %}
-    
-    {% if paginator.next_page %} 
-    <a href="/page{{ paginator.next_page }}/" title="Next Page" class="next">Next</a>
-    {% endif %} 
-  </nav>
 
 </div>

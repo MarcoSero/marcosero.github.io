@@ -1,3 +1,59 @@
+
+#header_container {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header_title {
+  width: 300px;
+  float: left;
+  text-align: left;
+}
+
+#header_title .name {
+  font-family: Lato, Verdana, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 158%;
+}
+
+#header_title .title {
+  font-family: Lato, Verdana, Tahoma, sans-serif;
+  font-weight: 400;
+  color: #666;
+}
+
+#menu {
+  float: right;
+  margin-top: 10px;
+}
+
+#header_nav li {
+  list-style-type: none;
+  display: inline;
+  padding: 10px;
+  font-size: 100%;
+  font-family: Lato, Verdana, Tahoma, sans-serif;
+  font-weight: 600;
+  color: #444;
+}
+
+.main_bio {
+  height: 200px;
+}
+
+.avatar {
+  float: left;
+}
+.bio {
+  float: right;
+  text-align: right;
+  font-family: 'Merriweather', Georgia, serif;
+}
+.cv {
+  font-size: 0.9em;
+}
+
 /*****************************************************************************/
 /*
 /* Common
@@ -61,19 +117,30 @@ a:hover   { color: #ff6760; }
 /* Home
 /*
 /*****************************************************************************/
+
+.posts {
+  max-width: 500px;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
 ul.posts {
   list-style-type: none;
-  margin-bottom: 2em;
 }
 
-ul.posts li {
-  line-height: 1.75em;
-}
-
-ul.posts span {
+ul.posts .date_archive {
   color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
+  float: right;
+  margin-top: 15px;
+}
+
+ul.posts .post_title_archive {
+  font-size: 1.4em;
+  font-family: Lato, Verdana, Tahoma, sans-serif;
+  font-weight: 600;
+  color: #444;
+  line-height: 40px;
 }
 
 /*****************************************************************************/
@@ -112,7 +179,7 @@ img {
   background-color: #f5f6f6;
   text-align: center;
   padding: 20px;
-  height: 200px;
+  height: 50px;
 }
 
 .date {
