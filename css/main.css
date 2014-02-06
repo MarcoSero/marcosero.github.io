@@ -11,7 +11,7 @@ img.big-image  {
 }
 
 #header_title {
-  width: 300px;
+  width: 150px;
   float: left;
   text-align: left;
 }
@@ -43,10 +43,6 @@ img.big-image  {
   color: #444;
 }
 
-.bio_home {
-  height: 400px;
-}
-
 img.avatar {
   padding-right: 20px;
 }
@@ -66,6 +62,7 @@ img.avatar {
 .socials {
   text-align: center;
   font-size: 24px;
+  margin-top: 20px;
 }
 
 .glyphicons {
@@ -363,4 +360,24 @@ Projects
 
 #pagination .next {
   float: right;
+}
+
+
+@media all and (max-width: 380px) {
+
+  .site .header {
+    height: 70px;
+  }
+
+  .main_bio_1 {
+    text-align: justify;
+  }
+
+  img.avatar {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 40px;
+  }
+
 }
