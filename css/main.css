@@ -363,6 +363,15 @@ Projects
 }
 
 
+@media all and (max-width: 1024px) {
+
+  img.big-image  {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+}
+
 @media all and (max-width: 380px) {
 
   .site .header {
