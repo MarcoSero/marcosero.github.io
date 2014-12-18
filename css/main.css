@@ -180,7 +180,7 @@ ul.posts .post_title_archive {
 }
 
 .content {
-  max-width: 630px;
+  max-width: 720px;
   margin: 3em auto 2em;
   padding-left: 15px;
   padding-right: 15px;
@@ -288,6 +288,7 @@ ul.posts .post_title_archive {
   border: 1px solid #ddd;
   background-color: #EDEDED;
   padding: 0 .4em;
+  font-size: 15px;
 }
 
 .post ul, .post ol {
