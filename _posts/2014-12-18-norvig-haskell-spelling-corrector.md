@@ -92,7 +92,7 @@ Creating the sets of known edits at distance 2 and the set of known words is jus
 edits2 :: String -> S.Set String
 edits2 w = S.foldr (S.union) S.empty (S.map edits1 (edits1 w))
 
-known_knownEdits2 :: String -> M.Map String a -> S.Set String
+knownEdits2 :: String -> M.Map String a -> S.Set String
 knownEdits2 w nwords = (edits2 w) `S.intersection` (M.keysSet nwords)
 
 known :: Ord a => S.Set a -> M.Map a b -> S.Set a
