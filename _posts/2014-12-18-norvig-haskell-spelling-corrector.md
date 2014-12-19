@@ -50,7 +50,7 @@ One imporant thing to say is that, since there seems to be a leaderboard on Pete
 
 <br>
 
-Let's start off by reading the file and training the probability model. Nothing special here. Just some mapping and filtering to create the Map of known words, our probability model.
+Let's start off with reading the file and training the probability model. Nothing special here. Just some mapping and filtering to create the Map of known words, our probability model.
 
 ```haskell
 nWords :: Num a => IO (M.Map [Char] a)
@@ -65,7 +65,7 @@ train = foldr (\ x acc -> M.insertWith (+) x 1 acc) M.empty
 
 <br>
 
-Things start getting interesting when we start creating all the possible edits at distance 1.  
+Things start getting interesting creating all the possible edits at distance 1.  
 Haskell's list comprehensions are just amazing. Look for example at the `inserts` function: instead of 2 horrible for loops you can just read "combine all the splits for each letter of the alphabet". This is where Haskell really shines.
 
 ```haskell
