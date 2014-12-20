@@ -192,6 +192,10 @@ ul.posts .post_title_archive {
   margin-right: auto;
 }
 
+.post img.emoji {
+  display: inline;
+}
+
 .site .header {
   background: url(/images/bg-noise-grey-v2.jpg);
   border-bottom: 1px solid #e3e3e4;

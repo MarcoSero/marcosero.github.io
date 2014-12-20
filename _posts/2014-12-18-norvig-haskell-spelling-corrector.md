@@ -8,7 +8,8 @@ categories: Haskell
 There are very few articles that every now and then keep coming up on Hacker News. One of them is Peter Norvig's [How to Write a Spelling Corrector](http://norvig.com/spell-correct.html).
 For those of you who don't know Peter Norvig, he's a really smart guy who also happens to be Director of Research at Google.
 
-I decided to take over the challenge of re-implementing his spelling corrector in Haskell. The main reason I did it was to see what Haskell is capable of compared to other languages such as Python.
+Having recently started learning Haskell, I decided to take over the challenge of re-implementing his spelling corrector.  
+One imporant thing to say is that, since there seems to be a leaderboard on Peter Norvig's website for the shortest implementations, I wrote this code trying to come up with the possible shortest version, putting *brevity over readability*, which is something I usually never do. But hey, sometimes we don't want to be too serious and it's just **FUN**!  
 Now, let me say that Python is a very nice language and a lot of people love it because it looks like pseudo-code and it's really easy to prototype in it. That's probably the main reason I still believe his version is better than mine, more readable yet even shorter.
 
 Here's my take:
@@ -46,7 +47,7 @@ correct w = nWords >>= \ws -> return (chooseBest (choices w ws) ws)
 {% endhighlight %}
 
 I am not going to explain the algorithm, since you can read it up in [Norvig's article](http://norvig.com/spell-correct.html). I am just going to explain what I like and I don't like in my Haskell version, adding type annotations previously omitted.
-One imporant thing to say is that, since there seems to be a leaderboard on Peter Norvig's website for the shortest implementations, I wrote this code putting *brevity over readability*, which is something I usually never do (in fact )
+
 
 <br>
 
@@ -140,3 +141,78 @@ Trying it out:
 <br>
 
 I am sure I have done something completely wrong and there's something that could have been done in a better way. Feedback is really appreciated. The code is on [GitHub](https://github.com/MarcoSero/Norvigs-Spelling-Corrector).
+
+#### UPDATE ####
+
+A lot of people pointed out that this code is not readable and it goes against a lot of Haskell best practices. I know that, in fact writing the most elegant Haskell code wasn't my objective for this article. I just wanted to come up with the shortest implementation.
+
+Some [very](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/2) [kind](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/3) people helped me out on GitHub my making the code cleaner and neater (gotta :heart: open source) and now the final implementation looks something like this:
+
+{% highlight haskell linenos %}
+module Spelling (TrainingDict, nWords, correct) where
+
+import Paths_Norvigs_Spelling_Corrector (getDataFileName)
+import           Data.Char (toLower, isAlpha)
+import           Data.List (sortBy, foldl')
+import qualified Data.ByteString.Char8 as B
+import qualified Data.Map.Strict as M
+import qualified Data.Set as S
+import           Data.Ord (comparing)
+
+type WordSet = S.Set String
+type TrainingDict = M.Map String Int
+
+alphabet :: String
+alphabet = ['a' .. 'z']
+
+nWords :: IO TrainingDict
+nWords = do
+  ws <- getDataFileName "big.txt" >>= B.readFile
+  return (train . lowerWords . B.unpack $ ws)
+
+lowerWords :: String -> [String]
+lowerWords = words . map normalize
+  where normalize c = if isAlpha c then toLower c else ' '
+
+train :: [String] -> TrainingDict
+train = foldl' (\acc x -> M.insertWith (+) x 1 acc) M.empty
+
+edits1 :: String -> WordSet
+edits1 w = S.fromList $ deletes ++ transposes ++ replaces ++ inserts
+  where
+    splits = [ splitAt n w | n <- [0 .. length w - 1] ]
+    deletes = map (\(a, b) -> a ++ tail b) splits
+    transposes = [ a ++ [b !! 1] ++ [b !! 0] ++ drop 2 b
+                 | (a,b) <- splits, length (take 2 b) > 1 ]
+    replaces = [ a ++ [c] ++ tail b
+               | (a,b) <- splits, c <- alphabet]
+    inserts = [ a ++ [c] ++ b
+              | (a,b) <- splits, c <- alphabet]
+
+edits2 :: String -> WordSet
+edits2 = S.foldl' S.union S.empty . S.map edits1 . edits1
+
+knownEdits2 :: String -> TrainingDict -> WordSet
+knownEdits2 w nwords = edits2 w `S.intersection` M.keysSet nwords
+
+known :: WordSet -> TrainingDict -> WordSet
+known inputSet nwords = inputSet `S.intersection` M.keysSet nwords
+
+choices :: String -> TrainingDict -> WordSet
+choices w ws = foldr orNextIfEmpty (S.singleton w)
+  [ known (S.singleton w) ws
+  , known (edits1 w) ws
+  , knownEdits2 w ws
+  ]
+  where orNextIfEmpty x y = if S.null x then y else x
+
+chooseBest :: WordSet -> TrainingDict -> String
+chooseBest ch ws = chooseBest' $
+  ws `M.intersection` M.fromList (map (\x -> (x, ())) (S.toList ch))
+  where
+    chooseBest' bestChs = head (map fst (sortCandidates bestChs))
+    sortCandidates = sortBy (comparing snd) . M.toList
+
+correct :: TrainingDict -> String -> String
+correct ws w = chooseBest (choices w ws) ws
+{% endhighlight %}
