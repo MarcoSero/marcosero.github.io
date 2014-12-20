@@ -146,7 +146,7 @@ I am sure I have done something completely wrong and there's something that coul
 
 A lot of people pointed out that this code is not readable and it goes against a lot of Haskell best practices. I know that, in fact writing the most elegant Haskell code wasn't my objective for this article. I just wanted to come up with the shortest implementation.
 
-Some [very](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/2) [kind](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/3) people helped me out on GitHub my making the code cleaner and neater (gotta :heart: open source) and now the final implementation looks something like this:
+Some [very](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/2) [kind](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/3) people helped me out on GitHub by making the code cleaner and neater (gotta :heart: open source) and now the final implementation looks something like this:
 
 {% highlight haskell linenos %}
 module Spelling (TrainingDict, nWords, correct) where
