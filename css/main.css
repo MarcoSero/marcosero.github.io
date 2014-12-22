@@ -44,7 +44,7 @@ img.big-image  {
 }
 
 img.avatar {
-  border: 2px solid;
+  border: 1px solid;
   border-color: #ffffff;
   border-radius: 200px;
   margin-right: 20px;
@@ -232,6 +232,11 @@ ul.posts .post_title_archive {
   margin-top: 5px;
 }
 
+.site .footer .avatar img {
+  border: 1px solid;
+  border-color: #ffffff;
+  border-radius: 80px;
+}
 .site .footer .bio {
   margin-left: 100px;
   margin-top: 7px;
