@@ -206,12 +206,8 @@ choices w ws = foldr orNextIfEmpty (S.singleton w)
   ]
   where orNextIfEmpty x y = if S.null x then y else x
 
-chooseBest :: WordSet -> TrainingDict -> String
-chooseBest ch ws = chooseBest' $
-  ws `M.intersection` M.fromList (map (\x -> (x, ())) (S.toList ch))
-  where
-    chooseBest' bestChs = head (map fst (sortCandidates bestChs))
-    sortCandidates = sortBy (comparing snd) . M.toList
+chooseBest :: WordSet -> TrainingDict -> B.ByteString
+chooseBest ch ws = maximumBy (compare `on` (\w -> M.findWithDefault 0 w ws)) (S.toList ch)
 
 correct :: TrainingDict -> String -> String
 correct ws w = chooseBest (choices w ws) ws
