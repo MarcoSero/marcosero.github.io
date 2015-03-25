@@ -26,6 +26,8 @@ So I chose a different languages for every different component in the app:
 - Machine-generated **Objective-C++** to work with the C++ image cache (thanks to Djinni I didn’t have to write it myself)
 - And of course **Objective-C** to make all this possible
 
+<img src="../../images/polyglot.jpg" width="700" >
+
 I tried to minimize the overhead and complexity of using different languages by separating the components as much as possible and declaring simple and clear interfaces.
 
 If you’re interested you can check out the code on [GitHub](https://github.com/MarcoSero/PolyglotApp).
