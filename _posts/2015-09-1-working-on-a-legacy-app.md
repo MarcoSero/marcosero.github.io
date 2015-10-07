@@ -27,4 +27,4 @@ is out.
 
 EDIT: The video is up!
 
-<iframe src="https://player.vimeo.com/video/140421669?byline=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/140421669">Marco Sero: Legacy Apps</a> from <a href="https://vimeo.com/user20904333">Daniel Haight</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/140421669?byline=0" width="650" height="365" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
