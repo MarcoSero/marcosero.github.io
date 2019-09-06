@@ -24,3 +24,7 @@ below. The talk was recorded, so I will update this post as soon as the video
 is out.
 
 <script async class="speakerdeck-embed" data-id="0e9d5bc13b504f8bbf1c06728b52a657" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+EDIT: The video is up!
+
+<iframe src="https://player.vimeo.com/video/140421669?byline=0" width="650" height="365" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
