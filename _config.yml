@@ -1,7 +1,7 @@
 name: Marco Sero
 description: Reading. Coding. Writing.
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 paginate: 5
 paginate_path: /blog/page:num
 permalink: /blog/:title
