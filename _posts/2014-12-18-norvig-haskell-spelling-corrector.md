@@ -14,7 +14,7 @@ Now, let me say that Python is a very nice language and a lot of people love it 
 
 Here's my take:
 
-{% highlight haskell linenos %}
+```haskell
 import           Data.Char (toLower, isAlpha)
 import           Data.List (sortBy)
 import qualified Data.ByteString.Char8 as B
@@ -44,7 +44,7 @@ chooseBest ch ws = chooseBest' (ws `M.intersection` (M.fromList (map (\x -> (x,0
         sortCandidates = (sortBy (\(_,c1)(_,c2) -> c2 `compare` c1)) . M.toList
 
 correct w = nWords >>= \ws -> return (chooseBest (choices w ws) ws)
-{% endhighlight %}
+```
 
 I am not going to explain the algorithm, since you can read it up in [Norvig's article](http://norvig.com/spell-correct.html). I am just going to explain what I like and I don't like in my Haskell version, adding type annotations previously omitted.
 
@@ -148,7 +148,7 @@ A lot of people pointed out that this code is not readable and it goes against a
 
 Some [very](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/2) [kind](https://github.com/MarcoSero/Norvigs-Spelling-Corrector/pull/3) people helped me out on GitHub by making the code cleaner and neater (gotta :heart: open source) and now the final implementation looks something like this:
 
-{% highlight haskell linenos %}
+```haskell
 module Spelling (TrainingDict, nWords, correct) where
 
 import Paths_Norvigs_Spelling_Corrector (getDataFileName)
@@ -211,4 +211,4 @@ chooseBest ch ws = maximumBy (compare `on` (\w -> M.findWithDefault 0 w ws)) (S.
 
 correct :: TrainingDict -> String -> String
 correct ws w = chooseBest (choices w ws) ws
-{% endhighlight %}
+```
