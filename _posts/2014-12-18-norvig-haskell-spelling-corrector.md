@@ -103,7 +103,7 @@ known inputSet nwords = inputSet `S.intersection` (M.keysSet nwords)
 <br>
 
 Now the ugliest part.
-I couldn't find nothing as neat as Python's `or` operator so I had to create a little function to do that for me. That's not too bad.
+I couldn't find anything as neat as Python's `or` operator so I had to create a little function to do that for me. That's not too bad.
 What I don't really like is the function `chooseBest`. Having to jump between sets and maps passing from lists is horrible. Probably even more terrible is having to manually sort the map based on the values.  
 I am sure there is a better way since Haskell is so powerful, I just couldn't come up with it.
 
