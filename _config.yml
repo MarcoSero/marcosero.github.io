@@ -22,6 +22,9 @@ author:
   strava: https://www.strava.com/athletes/4990290
   github: https://github.com/marcosero
 
+# Analytics: Cloudflare Web Analytics token (leave blank to disable)
+cloudflare_analytics: 0ef95fc4c3c74601ad82784fc12ef3fb
+
 # Collection setting
 collections:
   posts:
