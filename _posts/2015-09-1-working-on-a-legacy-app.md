@@ -4,6 +4,7 @@ title: "Working on a Legacy App"
 categories: public-speaking iOS
 redirect_from:
   - /blog/working-on-a-legacy-app.html
+  - /blog/working-on-a-legacy-app/
 ---
 
 Last week I gave a talk at

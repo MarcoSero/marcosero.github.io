@@ -5,6 +5,7 @@ date:   2012-09-16 21:35:46
 categories: [Rails, Capistrano]
 redirect_from:
   - /blog/deploy-rails-capistrano.html
+  - /blog/deploy-rails-capistrano/
 ---
 
 To run this blog, I must admit that I encountered some problem to have everything working.  

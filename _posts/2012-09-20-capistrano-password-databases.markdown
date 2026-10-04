@@ -5,6 +5,7 @@ date:   2012-09-20 21:35:46
 categories: [Rails, Github, Capistrano]
 redirect_from:
   - /blog/capistrano-password-databases.html
+  - /blog/capistrano-password-databases/
 ---
 
 I push the source code of this blog both on GitHub and to my EC2 instance, where it runs.

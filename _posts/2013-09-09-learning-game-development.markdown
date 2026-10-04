@@ -5,6 +5,7 @@ date:   2013-09-09 20:42:46
 categories: [Unity3D, Game Development]
 redirect_from:
   - /blog/learning-game-development.html
+  - /blog/learning-game-development/
 ---
 
 Every now and then, I get keen on a new technology and I decide I want to master it (even though I rarely do it). It can be a new programming language, a new MVC framework, a new platform and so forth.

@@ -5,6 +5,7 @@ date:   2015-07-20 16:00:21
 categories: iOS
 redirect_from:
   - /blog/mvvm-bindings-reactivecocoa3.html
+  - /blog/mvvm-bindings-reactivecocoa3/
 ---
 
 The first Release Candidate for the ReactiveCocoa 3 (aka The Swift Edition) has just been announced, so I thought this was a good time to share how I have been doing MVVM bindings with the new version of the framework.

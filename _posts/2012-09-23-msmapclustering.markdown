@@ -5,6 +5,7 @@ date:   2012-10-02 21:35:46
 categories: [Ruby, Github]
 redirect_from:
   - /blog/msmapclustering.html
+  - /blog/msmapclustering/
 ---
 
 During development of my thesis project (that consists _also_ in an iOS app on which I'll write when it will be done) I looked for a way to cluster pins inside a map view, like Photos.app does with photos on the map.

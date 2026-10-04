@@ -5,6 +5,7 @@ date:   2012-11-30 21:35:46
 categories: General
 redirect_from:
   - /blog/you-are-not-loren-brichter.html
+  - /blog/you-are-not-loren-brichter/
 ---
 
 A [good analysis][1] on why you shouldn't use the freemium model in the App Store.

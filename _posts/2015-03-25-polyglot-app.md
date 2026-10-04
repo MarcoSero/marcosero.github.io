@@ -5,6 +5,7 @@ date:   2015-03-25 20:33:21
 categories: iOS
 redirect_from:
   - /blog/polyglot-app.html
+  - /blog/polyglot-app/
 ---
 
 A couple of weeks ago I was in San Francisco to attend the Yammer Hack Day.

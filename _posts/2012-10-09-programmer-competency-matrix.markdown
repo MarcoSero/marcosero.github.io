@@ -5,6 +5,7 @@ date:   2012-10-09 21:35:46
 categories: General
 redirect_from:
   - /blog/programmer-competency-matrix.html
+  - /blog/programmer-competency-matrix/
 ---
 
 Level 0 of a Software Engineering about source code version control:

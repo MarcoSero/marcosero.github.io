@@ -4,6 +4,7 @@ title: "I made a Hacker News App"
 categories: iOS, ReactiveCocoa
 redirect_from:
   - /blog/i-made-a-hacker-news-app.html
+  - /blog/i-made-a-hacker-news-app/
 ---
 
 So I made a HackerNews app. That means I joined the very crowded circle of iOS developers building their own HackerNews app "because all the existing ones suck" (there is some irony right there).  

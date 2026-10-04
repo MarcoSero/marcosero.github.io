@@ -6,7 +6,7 @@ timezone: Europe/Zurich
 image: /assets/img/avatar.png # used for Open Graph / Twitter cards
 url: https://marcosero.com
 baseurl:
-permalink: /blog/:title/
+permalink: /archive/:title/
 
 # Profile settings
 author:

@@ -5,6 +5,7 @@ date:   2012-10-22 21:35:46
 categories: iOS MongoDB Hadoop
 redirect_from:
   - /blog/event-detection.html
+  - /blog/event-detection/
 ---
 
 This project is my thesis work for my bachelor degree at the Department of Computer Science of University of Turin.  

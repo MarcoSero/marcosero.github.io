@@ -5,6 +5,7 @@ date:   2012-07-17 21:35:46
 categories: [Ruby]
 redirect_from:
   - /blog/goodbye-mongodb.html
+  - /blog/goodbye-mongodb/
 ---
 
 I'm using MongoDB for my thesis work, and unquestionably it is full of great features. I choose it for its awesome handling of geo-located documents and its quick queries.

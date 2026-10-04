@@ -5,6 +5,7 @@ date:   2012-09-19 21:35:46
 categories: Sublime
 redirect_from:
   - /blog/sublime-2-tips.html
+  - /blog/sublime-2-tips/
 ---
 
 After MacroMates announced that TextMate 2 was available on [GitHub](https://github.com/textmate/textmate), I ([wrongly](https://github.com/textmate/textmate/commits/master)) concluded that it was probably going to be abandoned.

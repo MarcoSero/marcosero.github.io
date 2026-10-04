@@ -5,6 +5,7 @@ date:   2013-05-30 21:35:46
 categories: startups
 redirect_from:
   - /blog/startups.html
+  - /blog/startups/
 ---
 
 

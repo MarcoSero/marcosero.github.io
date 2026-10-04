@@ -5,6 +5,7 @@ date:   2013-05-27 21:35:46
 categories: [iOS, Github]
 redirect_from:
   - /blog/MSSlideNavigationController.html
+  - /blog/MSSlideNavigationController/
 ---
 
 The new version (> 6.0) of the Facebook app is probably one of the best non-Apple's app in the store nowadays.  

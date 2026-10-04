@@ -5,6 +5,7 @@ date:   2013-08-15 21:35:46
 categories: General
 redirect_from:
   - /blog/citymapper.html
+  - /blog/citymapper/
 ---
 
 

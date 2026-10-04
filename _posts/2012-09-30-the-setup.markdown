@@ -5,6 +5,7 @@ date:   2012-09-30 21:35:46
 categories: Ruby Rails Github
 redirect_from:
   - /blog/the-setup.html
+  - /blog/the-setup/
 ---
 
 I needed a script to quickly setup a development environment on my MacBook Pro.
