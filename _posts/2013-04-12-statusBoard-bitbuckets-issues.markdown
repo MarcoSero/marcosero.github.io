@@ -3,6 +3,8 @@ layout: post
 title:  "StatusBoard + BitBucket"
 date:   2013-04-12 21:35:46
 categories: [Ruby, Bitbucket, Github]
+redirect_from:
+  - /blog/statusBoard-bitbuckets-issues.html
 ---
 
 When it comes to nerdy stuff, here I am.

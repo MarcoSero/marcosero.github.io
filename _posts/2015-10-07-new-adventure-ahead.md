@@ -2,6 +2,8 @@
 layout: post
 title: "New adventure ahead"
 categories: iOS
+redirect_from:
+  - /blog/new-adventure-ahead.html
 ---
 
 After just one year at Microsoft working on the Yammer iOS app, I'm ready for a new adventure.  

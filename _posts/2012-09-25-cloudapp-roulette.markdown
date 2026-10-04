@@ -3,6 +3,8 @@ layout: post
 title:  "Ruby CloudApp Roulette"
 date:   2012-09-25 21:35:46
 categories: Ruby
+redirect_from:
+  - /blog/cloudapp-roulette.html
 ---
 
 Every time I start to learn a new language, I have fun writing a [Cloud App][1] Roulette.  

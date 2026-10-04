@@ -3,6 +3,8 @@ layout: post
 title:  "The Passionate Programmer"
 date:   2013-06-25 21:35:46
 categories: books
+redirect_from:
+  - /blog/the-passionate-programmer.html
 ---
 
 

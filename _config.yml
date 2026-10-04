@@ -4,8 +4,8 @@ markdown: kramdown
 highlighter: rouge
 paginate: 5
 paginate_path: /blog/page:num
-permalink: /blog/:title
-url: http://www.marcosero.com
-plugins: [jekyll-paginate]
+permalink: /blog/:title/
+url: https://marcosero.com
+plugins: [jekyll-paginate, jekyll-redirect-from]
 gems:
   - jemoji

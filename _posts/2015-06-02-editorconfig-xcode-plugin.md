@@ -3,6 +3,8 @@ layout: post
 title:  EditorConfig Xcode Plugin
 date:   2015-06-02 16:00:21
 categories: iOS
+redirect_from:
+  - /blog/editorconfig-xcode-plugin.html
 ---
 
 I love keeping most of my configurations in dotfiles and I rely on them for pretty much everything I can.  

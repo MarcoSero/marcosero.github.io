@@ -3,6 +3,8 @@ layout: post
 title:  "Truths about programming"
 date:   2012-09-28 21:35:46
 categories: Ruby Github
+redirect_from:
+  - /blog/thruts-programming.html
 ---
 
 Great [post][1] with many interesting facts:

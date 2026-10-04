@@ -2,6 +2,8 @@
 layout: post
 title: "Working on a Legacy App"
 categories: public-speaking iOS
+redirect_from:
+  - /blog/working-on-a-legacy-app.html
 ---
 
 Last week I gave a talk at

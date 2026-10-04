@@ -3,6 +3,8 @@ layout: post
 title:  "Nimble"
 date:   2013-09-23 20:42:46
 categories: [iOS, Github]
+redirect_from:
+  - /blog/nimble.html
 ---
 
 What's Nimble? Nimble is the Core Data wrapper I have been working on for one of my never-completed personal project.  

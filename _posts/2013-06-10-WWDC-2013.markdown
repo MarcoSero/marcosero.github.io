@@ -3,6 +3,8 @@ layout: post
 title:  "WWDC 2013"
 date:   2013-06-10 21:35:46
 categories: iOS
+redirect_from:
+  - /blog/WWDC-2013.html
 ---
 
 As iOS developer, here's my humble list of what I hope to see today:

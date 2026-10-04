@@ -3,6 +3,8 @@ layout: post
 title:  "A Ruby beginner"
 date:   2012-09-03 21:35:46
 categories: [Ruby, Rails]
+redirect_from:
+  - /blog/ruby-beginner.html
 ---
 
 A couple of weeks ago I decided to learn Ruby to take advantage from the most acclaimed framework of last years: Ruby on Rails.

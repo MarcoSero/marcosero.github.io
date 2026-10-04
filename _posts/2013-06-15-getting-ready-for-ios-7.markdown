@@ -3,6 +3,8 @@ layout: post
 title:  "Getting ready for iOS 7"
 date:   2013-06-15 21:35:46
 categories: iOS
+redirect_from:
+  - /blog/getting-ready-for-ios-7.html
 ---
 
 Marco Arment published a [post](http://www.marco.org/2013/06/11/fertile-ground) on his blog which I completely agree with:

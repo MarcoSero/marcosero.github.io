@@ -3,6 +3,8 @@ layout: post
 title:  "Spelling corrector in Haskell"
 date:   2014-12-18 21:35:46
 categories: Haskell
+redirect_from:
+  - /blog/norvig-haskell-spelling-corrector.html
 ---
 
 There are very few articles that every now and then keep coming up on Hacker News. One of them is Peter Norvig's [How to Write a Spelling Corrector](http://norvig.com/spell-correct.html).

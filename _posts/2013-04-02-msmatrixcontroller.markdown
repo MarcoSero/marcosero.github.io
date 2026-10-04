@@ -3,6 +3,8 @@ layout: post
 title:  "MSMatrixController"
 date:   2013-04-02 21:35:46
 categories: [iOS, Github]
+redirect_from:
+  - /blog/msmatrixcontroller.html
 ---
 
 I'm working on a new iPhone app (a personal one). it happened that, in a eventful night, I created an iOS component to organize view controllers in a gesture-based 2D matrix.

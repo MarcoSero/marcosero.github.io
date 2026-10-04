@@ -3,6 +3,8 @@ layout: post
 title:  "Userl"
 date:   2012-10-02 21:35:46
 categories: Ruby Github2
+redirect_from:
+  - /blog/userl.html
 ---
 
 Exploring GitHub, often I ask myself: "What's this user's favourite language? How does it like to get stuff done?"  

@@ -3,6 +3,8 @@ layout: post
 title:  "What I do for a living"
 date:   2013-06-25 21:35:46
 categories: General
+redirect_from:
+  - /blog/what-i-do-for-a-living.html
 ---
 
 
