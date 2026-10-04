@@ -11,9 +11,7 @@ permalink: /archive/:title/
 # Profile settings
 author:
   name: Marco Sero
-  bio: >-
-    Going on adventures. Doing hard things. Making memories.<br>
-    Currently living in Zurich, working at Google.
+  bio: Zurich, Switzerland
   avatar: /assets/img/avatar.png
   # Social links, leave blank to hide
   instagram: https://www.instagram.com/marcosero

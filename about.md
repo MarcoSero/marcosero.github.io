@@ -2,10 +2,10 @@
 title: About
 permalink: /about/
 layout: page
-excerpt: Going on adventures. Doing hard things. Making memories.
+excerpt: Curious by nature, I like to build things to understand how they work.
 comments: false
 ---
 
-Going on adventures. Doing hard things. Making memories.
+I'm Marco. I'm curious by nature, and I like to build things to understand how they work.
 
-I'm Marco, living in Zurich and working at Google. I'm curious by nature and I love to tinker, take things apart and see how they work. I never say no to a new challenge. This blog is where I write down what I'm reading, building and learning.
+If you're curious about what I get up to outdoors, you can follow me on [Instagram]({{ site.author.instagram }}) or [Strava]({{ site.author.strava }}).
