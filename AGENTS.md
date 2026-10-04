@@ -4,7 +4,7 @@ Notes for AI agents working on Marco Sero's personal site, <https://marcosero.co
 
 ## Working agreements
 
-- **Pushing to `master` is the production deploy.** Pages builds only from `master`, so a branch push never goes live. Show the user a local preview and get an explicit go-ahead before pushing to `master`. For big changes, use a branch, then fast-forward `master` once approved. The theme switch used this approach.
+- **Pushing to `master` is the production deploy.** The Pages workflow runs on pushes to `master` only, so a branch push never goes live. Show the user a local preview and get an explicit go-ahead before pushing to `master`. For big changes, use a branch, then fast-forward `master` once approved. The theme switch used this approach.
 - **Commit in logical pieces**, one concern per commit, with a short summary line and a body that says why. Commits end with the `Co-Authored-By` line from the session's attribution reminder.
 - **Don't change git config.** `origin` is HTTPS with no saved credentials, so `git push` fails. Push with `gh`'s credentials for that one command, without changing the remote:
   ```bash
@@ -30,20 +30,17 @@ bundle exec jekyll serve --port 4003          # preview
 - `_site/` and `.jekyll-cache/` are git-ignored.
 - Redirect pages point at the absolute `https://marcosero.com/...` URL, so clicking a `/blog/...` redirect on localhost jumps to the live site. Check redirect HTML in `_site/` instead of clicking through.
 
-## GitHub Pages ≠ local Jekyll (important)
+## Deployment (GitHub Actions)
 
-Pages uses its own older toolchain (Jekyll 3.10 via the `github-pages` stack), while local builds use Jekyll 4. **A green local build does not prove Pages will build it.**
+Pages is set to **Source: GitHub Actions**. `.github/workflows/pages.yml` builds with the repo's own Jekyll 4 (Ruby 4.0, `JEKYLL_ENV=production`, Gemfile.lock) and deploys with the official `upload-pages-artifact` and `deploy-pages` actions. Local builds and production therefore use the same toolchain.
 
-- Plugins come from `plugins:` in `_config.yml`. Currently `jekyll-redirect-from`, `jekyll-sitemap`, `jemoji`. Use **only** `plugins:`. An old `gems:` key made Pages ignore `jekyll-redirect-from` (the `.html` redirects 404'd) while local builds looked fine.
-- Only plugins on the GitHub Pages allow-list work. Check `https://pages.github.com/versions.json` before adding one. Klisé's original `jekyll-postfiles` plugin is not on the list, so it was removed. The theme's `{% feed_meta %}` tag was replaced with a hand-written `<link rel="alternate">` in `_includes/header.html`.
-- To check the real Pages build, run GitHub's build image (needs Docker; the CLI is at `/Users/marco/.docker/bin`):
-  ```bash
-  docker run --rm --platform linux/amd64 \
-    -e GITHUB_WORKSPACE=/github/workspace -e INPUT_SOURCE=src -e INPUT_DESTINATION=out \
-    -v "$SCRATCH":/github/workspace ghcr.io/actions/jekyll-build-pages:v1.0.13
-  ```
-  Copy the repo into `$SCRATCH/src` first (exclude `.git`, `_site`, `.jekyll-cache`) and make an empty `$SCRATCH/out`. Without a GitHub token, the `github-metadata` plugin fails. This site doesn't use it, so build with `OFFLINE=true` or substitute the three plugins above. Then `diff -r` the result against the local `_site`. Past checks matched.
-- After a push, inspect the deploy with `gh api repos/MarcoSero/marcosero.github.io/pages/builds/latest --jq '{status,commit,error:.error.message}'`. In earlier sessions the permission system sometimes blocked this call as a "production deploy" action. If it is blocked, tell the user and give them the Actions URL (`https://github.com/MarcoSero/marcosero.github.io/actions`) and the URLs to check by hand. Don't route around it.
+- History: until October 2026 Pages built from the `master` branch with its own Jekyll 3.10 (`github-pages` gem). That ignored the Gemfile, produced "github-pages gem can't satisfy your Gemfile" warnings and ran a Node 20 action. Changing the setting back to "Deploy from a branch" would bring all of that back.
+- Plugins come from `plugins:` in `_config.yml`, currently `jekyll-redirect-from`, `jekyll-sitemap`, `jemoji`. Plugins must also be in the `Gemfile` under `:jekyll_plugins`. Don't use a `gems:` key.
+- **`AGENTS.md` must stay in `exclude:` in `_config.yml`.** It was briefly not excluded. Under the old Pages build, the `jekyll-optional-front-matter` plugin rendered it as a page, and its literal `{% feed_meta %}` text crashed the build. Jekyll 4 would instead copy it to `_site/AGENTS.md`, which publishes it. The same goes for any new root-level Markdown or text file you don't want served.
+- Keep action versions current. If a new Node deprecation warning shows up, bump the major versions in `pages.yml` (check `gh api repos/actions/<name>/releases/latest`).
+- After a push, check the run with `gh run list --repo MarcoSero/marcosero.github.io --limit 3` and `gh run view <id> --log-failed`. The "Deploy" job URL is also shown in the Actions tab (`https://github.com/MarcoSero/marcosero.github.io/actions`). In earlier sessions the permission system sometimes blocked deploy-status calls as "production deploy" actions. If that happens, tell the user and give them the Actions URL and the URLs to check by hand. Don't route around it.
+- Rollback: set Pages back to the legacy branch source with `gh api -X PUT repos/MarcoSero/marcosero.github.io/pages -f build_type=legacy -f 'source[branch]=master' -f 'source[path]=/'`, or revert the workflow commit. Ask the user first, since it is a production setting.
+- Sass `@import` deprecation warnings in a local build come from the Klisé stylesheets. They are harmless and need a stylesheet migration to remove.
 
 ## URL scheme (don't break old links)
 
@@ -115,5 +112,5 @@ Home page shows the bio line from `author.bio` (just "Zurich, Switzerland") and 
 2. `ls _site/archive | head`, and for a couple of posts check `_site/blog/<slug>/index.html` and `_site/blog/<slug>.html` are redirect stubs.
 3. `/`, `/archive/`, `/about/`, one post, `/feed.xml` and a nonexistent URL (404 page) all return the right content on the local preview.
 4. The feed GUIDs are unchanged: diff the `<guid>` lines against the live `https://marcosero.com/feed.xml`.
-5. For anything touching plugins or Jekyll features, run the Pages build image described above.
-6. After the user approves and you push, check the live URLs with `curl -sI` and report anything unverified. Don't claim a deploy succeeded unless you checked it.
+5. Run the build with `JEKYLL_ENV=production`, as the workflow does, if you touched anything environment-dependent.
+6. After the user approves and you push, check the workflow run succeeded and the live URLs with `curl -sI`, and report anything unverified. Don't claim a deploy succeeded unless you checked it.
