@@ -1,9 +1,60 @@
-name: Marco Sero
+# Site settings
+title: Marco Sero
 description: Reading. Coding. Writing.
+lang: en-US
+timezone: Europe/Zurich
+image: /assets/img/avatar.png # used for Open Graph / Twitter cards
+url: https://marcosero.com
+baseurl:
+permalink: /blog/:title/
+
+# Profile settings
+author:
+  name: Marco Sero
+  bio: >-
+    Going on adventures. Doing hard things. Making memories.<br>
+    Currently living in Zürich, working at Google.
+  avatar: /assets/img/avatar.png
+  # Social links, leave blank to hide
+  instagram: https://www.instagram.com/marcosero
+  x: https://x.com/marcosero
+  linkedin: https://www.linkedin.com/in/marcosero
+  strava: https://www.strava.com/athletes/4990290
+  github: https://github.com/marcosero
+
+# Collection setting
+collections:
+  posts:
+    output: true
+
+# Markdown settings
 markdown: kramdown
 highlighter: rouge
-paginate: 5
-paginate_path: /blog/page:num
-permalink: /blog/:title/
-url: https://marcosero.com
-plugins: [jekyll-paginate, jekyll-redirect-from, jemoji]
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Homepage limit posts
+number_of_posts: 5
+
+# Build settings
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jemoji
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - newpost.rb

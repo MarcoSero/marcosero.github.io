@@ -1,0 +1,35 @@
+{%- comment -%}
+  An explicit choice (sun/moon toggle, stored in localStorage) wins; otherwise follow the system.
+  No // comments inside the script: the compress layout joins lines.
+{%- endcomment -%}
+<script>
+  (() => {
+    const body = document.body;
+    const query = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const stored = () => {
+      try {
+        const value = localStorage.getItem("theme");
+        return value === "dark" || value === "light" ? value : null;
+      } catch (e) {
+        return null;
+      }
+    };
+
+    const apply = (theme) => {
+      if (theme === "dark") {
+        body.setAttribute("data-theme", "dark");
+      } else {
+        body.removeAttribute("data-theme");
+      }
+    };
+
+    apply(stored() || (query.matches ? "dark" : "light"));
+
+    query.addEventListener("change", (event) => {
+      if (!stored()) apply(event.matches ? "dark" : "light");
+    });
+
+    setTimeout(() => body.classList.remove("notransition"), 75);
+  })();
+</script>
