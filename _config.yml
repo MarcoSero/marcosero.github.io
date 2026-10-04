@@ -6,6 +6,4 @@ paginate: 5
 paginate_path: /blog/page:num
 permalink: /blog/:title/
 url: https://marcosero.com
-plugins: [jekyll-paginate, jekyll-redirect-from]
-gems:
-  - jemoji
+plugins: [jekyll-paginate, jekyll-redirect-from, jemoji]
