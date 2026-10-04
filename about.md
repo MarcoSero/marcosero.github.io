@@ -8,6 +8,4 @@ comments: false
 
 Going on adventures. Doing hard things. Making memories.
 
-I'm Marco, living in Zürich and working at Google. I used to write mostly about iOS development; these days, the blog is a record of what I'm reading, building and learning.
-
-This site runs on [Jekyll](https://jekyllrb.com) with the [Klisé](https://github.com/piharpi/jekyll-klise) theme.
+I'm Marco, living in Zurich and working at Google. I'm curious by nature and I love to tinker, take things apart and see how they work. I never say no to a new challenge. This blog is where I write down what I'm reading, building and learning.
