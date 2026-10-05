@@ -43,7 +43,10 @@ figure {
 
 // Basic styling
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   position: relative;
   color: $text-base-color;
@@ -275,25 +278,26 @@ blockquote {
 
 // Wrapper
 .wrapper {
-  max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full} * 2));
-  max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $narrow-size;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-full;
   padding-left: $spacing-full;
-  @extend %clearfix;
+
+  > main {
+    flex: 1;
+  }
 
   @include media-query($on-mobile) {
-    max-width: -webkit-calc(#{$narrow-size} - (#{$spacing-full}));
-    max-width: calc(#{$narrow-size} - (#{$spacing-full}));
+    max-width: $narrow-size + $spacing-full - 10;
     padding-right: $spacing-full - 10;
     padding-left: $spacing-full - 10;
-
-    &.blurry {
-      animation: 0.2s ease-in forwards blur;
-      -webkit-animation: 0.2s ease-in forwards blur;
-    }
   }
 }
 
