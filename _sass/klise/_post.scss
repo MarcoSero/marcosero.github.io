@@ -89,7 +89,10 @@
 
   a {
     color: $text-link;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+
     &[target="_blank"]::after {
       content: " \2197";
       font-size: $small-font-size;
@@ -106,6 +109,10 @@
     &:focus {
       color: $text-link;
     }
+  }
+
+  .post-item a {
+    text-decoration: none;
   }
 
   > p {
