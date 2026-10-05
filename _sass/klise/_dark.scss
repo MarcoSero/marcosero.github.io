@@ -160,15 +160,15 @@ body[data-theme="dark"] {
     }
 
     .post-item-date {
-      color: $dark-white;
+      color: $dark-gray;
     }
     .post-item-title {
       a {
-        color: $dark-text-base-color;
+        color: $dark-white;
 
         &:hover,
-        &focus {
-          color: $dark-white;
+        &:focus-visible {
+          color: $dark-text-link;
         }
       }
     }
